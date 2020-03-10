@@ -8,10 +8,6 @@ class CrawlIpMethodClass(type):
     def __new__(cls, name, bases, attrs):
         '''
         设置元类，让继承元类的新类把所有以'crawl_'的方法全都放入attrs['__CrawlFuncs__']，交给别的方法调用爬虫
-        :param name:
-        :param bases:
-        :param attrs:
-        :return:
         '''
         count = 0
         attrs['__CrawlFuncs__'] = []
